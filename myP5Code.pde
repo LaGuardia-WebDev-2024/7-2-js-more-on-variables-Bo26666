@@ -6,16 +6,18 @@ void setup() {
 //🎯Varaible Declarations Go Here
 var x = 200;
 var y = 100;
-
+var randRed = random(0,255);
+var randGreen = random(0,255);
+var randBlue = random(0,255);
 //🟢Draw Procedure - Runs on Repeat
-void draw(){
+void draw(){x = mouseX; y = mouseY;
   background(255,255,255,200);
 
   //💡⬇️⬇️⬇️💡 Your Code For This Unit Goes Here
   
   noStroke();
   fill(30, 204, 91); // a nice froggy green!
-
+fill (randRed, randGreen, randBlue);
   ellipse(x, y, 200, 100); // face
   ellipse(x - 50, y - 50, 40, 40); // left eye socket
   ellipse(x + 50, y - 50, 40, 40); // right eye socket
@@ -24,6 +26,14 @@ void draw(){
   ellipse(x - 50, y - 50, 30, 30); // left eyeball
   ellipse(x + 50, y - 50, 30, 30); // right eyeball
   
+  fill(0,0,0);//pupils
+ ellipse(x - 50, y - 50, 15, 15); // left eyeball
+  ellipse(x + 50, y - 50, 15, 15); // right eyeball
+  
+fill(237, 9, 21)
+ellipse(x,y+20, 100,50);//mouth
+
+
 
 }
 
